@@ -98,7 +98,7 @@ Salida:
 |           |      |      | |    |      | 
  ----   ----          ----   ----         
 ```
-###Tests
+### Tests
 Se realizó una clase que contiene los respectivos test en JUnit. Esta clase comprueba que el número de columnas para todos los números en todos los sizes posibles sea correcto. No se comprobó el número de filas correcto porque la forma como esta construido el printer se asegura de crear 3 filas base (la primera fila, la del medio y la inferior) + las 2 filas intermedias de las cuales cada una se imprime "size" veces. No se pudo probar porque el método printer no retorna ningún valor, solo imprime el resultado en consola.
 ## Consideraciones adicionales
 - El ejemplo original de https://github.com/pslcorp/lcdrefactor no concuerda del todo con el enunciado, pues utiliza "_" y esto hace que la visualización de los números sea distinta. Se hizo caso omiso al ejemplo y se desarrollo tal cúal se exponía en el enunciado (con "-").
