@@ -58,10 +58,10 @@ Salida: Imprimir los números especificados usando el caracter “-“ para los 
 Entre cada impresión debe haber una línea blanca. 
  
 Ejemplo: 
-Entrada:
-2,1234
-3,234567890
-4,234567
+Entrada:  
+2,1234  
+3,234567890  
+4,234567  
 0,0
    
 Salida: 
@@ -100,6 +100,6 @@ Salida:
 ```
 
 ## Consideraciones adicionales
-- El ejemplo original de https://github.com/pslcorp/lcdrefactor no concuerda del todo con el enunciado, pues utiliza "_" y esto afecta el número de columnas. Se hizo caso omiso al ejemplo y se desarrollo tal cúal se exponía en el enunciado.
+- El ejemplo original de https://github.com/pslcorp/lcdrefactor no concuerda del todo con el enunciado, pues utiliza "_" y esto afecta el número de filas. Se hizo caso omiso al ejemplo y se desarrollo tal cúal se exponía en el enunciado.
 
 
