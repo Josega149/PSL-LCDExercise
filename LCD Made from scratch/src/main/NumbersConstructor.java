@@ -1,35 +1,48 @@
 package main;
 
 public class NumbersConstructor {
+	/**
+	 * Each one of these constants represents a pattern that describes the lines of the digits.
+	 * Each digit, from 0 to 9, can be represented with one specific combination of five of these constants.
+	 */
+	private final static String LINE_FULL_OF_HORIZONTALS = "LINE_FULL_OF_HORIZONTALS";
+	private final static String LINE_FULL_OF_HORIZONTALS_AND_ENDS_WITH_VERTICAL = "LINE_FULL_OF_HORIZONTALS_AND_ENDS_WITH_VERTICAL";
+	private final static String LINE_FULL_OF_HORIZONTALS_AND_STARTS_WITH_VERTICAL = "LINE_FULL_OF_HORIZONTALS_AND_STARTS_WITH_VERTICAL";
+	private final static String LINE_FULL_OF_HORIZONTALS_STARTS_AND_ENDS_WITH_VERTICAL = "LINE_FULL_OF_HORIZONTALS_STARTS_AND_ENDS_WITH_VERTICAL";
+	private final static String LINE_FULL_OF_SPACES = "LINE_FULL_OF_SPACES";
 
-	private final static String LINE_FULL_OF_HORIZONTALS = "full";
-	private final static String LINE_FULL_OF_HORIZONTALS_VERTICAL_END = "full,vEnd";
-	private final static String LINE_FULL_OF_HORIZONTALS_VERTICAL_START = "full,vStart";
-	private final static String LINE_FULL_OF_HORIZONTALS_VERTICAL_START_END = "full,vStart,vEnd";
-	private final static String LINE_FULL_OF_SPACES = "spaces";
+	private final static String BOTH_ENDS_VERTICALS= "BOTH_ENDS_VERTICALS";
+	private final static String ENDS_WITH_VERTICAL = "ENDS_WITH_VERTICAL";
+	private final static String STARTS_WITH_VERTICAL = "STARTS_WITH_VERTICAL";
 
-	private final static String BOTH_VERTICALS= "both";
-	private final static String JUST_RIGTH_VERTICAL = "rigth";
-	private final static String JUST_LEFT_VERTICAL = "left";
-	private final static String IN_THE_MIDDLE_VERTICAL = "middleV";
+	public static Digit ZERO; 	 public static Digit ONE; 	public static Digit TWO;  public static Digit THREE;  public static Digit FOUR;
+	public static Digit FIVE;   public static Digit SIX; 	public static Digit SEVEN; public static Digit EIGTH; public static Digit NINE; 
 
-	public static Number ZERO; 	 public static Number ONE; 	public static Number TWO;  public static Number THREE;  public static Number FOUR;
-	public static Number FIVE;   public static Number SIX; 	public static Number SEVEN; public static Number EIGTH; public static Number NINE; 
-
-
+	/**
+	 * This method creates each digit with the specific combination of constants to represent it with "|" and "-" .
+	 */
 	public NumbersConstructor(){
-		ZERO = new Number(LINE_FULL_OF_HORIZONTALS,BOTH_VERTICALS,BOTH_VERTICALS,BOTH_VERTICALS,LINE_FULL_OF_HORIZONTALS);
-		ONE = new Number(LINE_FULL_OF_SPACES,IN_THE_MIDDLE_VERTICAL,IN_THE_MIDDLE_VERTICAL,IN_THE_MIDDLE_VERTICAL,LINE_FULL_OF_SPACES);
-		TWO = new Number(LINE_FULL_OF_HORIZONTALS,JUST_RIGTH_VERTICAL,LINE_FULL_OF_HORIZONTALS,JUST_LEFT_VERTICAL,LINE_FULL_OF_HORIZONTALS);
-		THREE = new Number(LINE_FULL_OF_HORIZONTALS,JUST_RIGTH_VERTICAL,LINE_FULL_OF_HORIZONTALS_VERTICAL_END,JUST_RIGTH_VERTICAL,LINE_FULL_OF_HORIZONTALS);
-		FOUR = new Number(LINE_FULL_OF_SPACES,BOTH_VERTICALS,LINE_FULL_OF_HORIZONTALS_VERTICAL_END,JUST_RIGTH_VERTICAL,LINE_FULL_OF_SPACES);
-		FIVE = new Number(LINE_FULL_OF_HORIZONTALS,JUST_LEFT_VERTICAL,LINE_FULL_OF_HORIZONTALS,JUST_RIGTH_VERTICAL,LINE_FULL_OF_HORIZONTALS);
-		SIX = new Number(LINE_FULL_OF_HORIZONTALS,JUST_LEFT_VERTICAL,LINE_FULL_OF_HORIZONTALS_VERTICAL_START,BOTH_VERTICALS,LINE_FULL_OF_HORIZONTALS);
-		SEVEN = new Number(LINE_FULL_OF_HORIZONTALS,JUST_RIGTH_VERTICAL,JUST_RIGTH_VERTICAL,JUST_RIGTH_VERTICAL,LINE_FULL_OF_SPACES);
-		EIGTH = new Number(LINE_FULL_OF_HORIZONTALS,BOTH_VERTICALS,LINE_FULL_OF_HORIZONTALS_VERTICAL_START_END,BOTH_VERTICALS,LINE_FULL_OF_HORIZONTALS);
-		NINE = new Number(LINE_FULL_OF_HORIZONTALS,BOTH_VERTICALS,LINE_FULL_OF_HORIZONTALS_VERTICAL_END,JUST_RIGTH_VERTICAL,LINE_FULL_OF_SPACES);
+		ZERO = new Digit(LINE_FULL_OF_HORIZONTALS,BOTH_ENDS_VERTICALS,BOTH_ENDS_VERTICALS,BOTH_ENDS_VERTICALS,LINE_FULL_OF_HORIZONTALS);
+		ONE = new Digit(LINE_FULL_OF_SPACES,ENDS_WITH_VERTICAL,ENDS_WITH_VERTICAL,ENDS_WITH_VERTICAL,LINE_FULL_OF_SPACES);
+		TWO = new Digit(LINE_FULL_OF_HORIZONTALS,ENDS_WITH_VERTICAL,LINE_FULL_OF_HORIZONTALS,STARTS_WITH_VERTICAL,LINE_FULL_OF_HORIZONTALS);
+		THREE = new Digit(LINE_FULL_OF_HORIZONTALS,ENDS_WITH_VERTICAL,LINE_FULL_OF_HORIZONTALS_AND_ENDS_WITH_VERTICAL,ENDS_WITH_VERTICAL,LINE_FULL_OF_HORIZONTALS);
+		FOUR = new Digit(LINE_FULL_OF_SPACES,BOTH_ENDS_VERTICALS,LINE_FULL_OF_HORIZONTALS_AND_ENDS_WITH_VERTICAL,ENDS_WITH_VERTICAL,LINE_FULL_OF_SPACES);
+		FIVE = new Digit(LINE_FULL_OF_HORIZONTALS,STARTS_WITH_VERTICAL,LINE_FULL_OF_HORIZONTALS,ENDS_WITH_VERTICAL,LINE_FULL_OF_HORIZONTALS);
+		SIX = new Digit(LINE_FULL_OF_HORIZONTALS,STARTS_WITH_VERTICAL,LINE_FULL_OF_HORIZONTALS_AND_STARTS_WITH_VERTICAL,BOTH_ENDS_VERTICALS,LINE_FULL_OF_HORIZONTALS);
+		SEVEN = new Digit(LINE_FULL_OF_HORIZONTALS,ENDS_WITH_VERTICAL,ENDS_WITH_VERTICAL,ENDS_WITH_VERTICAL,LINE_FULL_OF_SPACES);
+		EIGTH = new Digit(LINE_FULL_OF_HORIZONTALS,BOTH_ENDS_VERTICALS,LINE_FULL_OF_HORIZONTALS_STARTS_AND_ENDS_WITH_VERTICAL,BOTH_ENDS_VERTICALS,LINE_FULL_OF_HORIZONTALS);
+		NINE = new Digit(LINE_FULL_OF_HORIZONTALS,BOTH_ENDS_VERTICALS,LINE_FULL_OF_HORIZONTALS_AND_ENDS_WITH_VERTICAL,ENDS_WITH_VERTICAL,LINE_FULL_OF_SPACES);
 	}
-
+	
+	
+	/**
+	 * This method receives the size and the type of line and recreates the pattern of the line with the
+	 * needed size.
+	 * 
+	 * @param size The number of middle elements between the start column and the final column.
+	 * @param type (one of the 8 constants above)
+	 * 
+	 */
 	public String createLine(int size, String type) {
 		StringBuilder st = new StringBuilder();
 		size = size+2;
@@ -41,27 +54,21 @@ public class NumbersConstructor {
 			}
 			st.append(" ");
 			break;
-		case IN_THE_MIDDLE_VERTICAL:
-			for(int i=0;i< size-1;i++) {
-				st.append(" ");
-			}
-			st.append("|");
-			break;
-		case LINE_FULL_OF_HORIZONTALS_VERTICAL_END:
+		case LINE_FULL_OF_HORIZONTALS_AND_ENDS_WITH_VERTICAL:
 			st.append(" ");
 			for(int i=0;i< size-2;i++) {
 				st.append("-");
 			}
 			st.append("|");
 			break;
-		case LINE_FULL_OF_HORIZONTALS_VERTICAL_START:
+		case LINE_FULL_OF_HORIZONTALS_AND_STARTS_WITH_VERTICAL:
 			st.append("|");
 			for(int i=0;i< size-2;i++) {
 				st.append("-");
 			}
 			st.append(" ");
 			break;
-		case LINE_FULL_OF_HORIZONTALS_VERTICAL_START_END:
+		case LINE_FULL_OF_HORIZONTALS_STARTS_AND_ENDS_WITH_VERTICAL:
 			st.append("|");
 			for(int i=0;i< size-2;i++) {
 				st.append("-");
@@ -73,20 +80,20 @@ public class NumbersConstructor {
 				st.append(" ");
 			}
 			break;
-		case BOTH_VERTICALS:
+		case BOTH_ENDS_VERTICALS:
 			st.append("|");
 			for(int i=0;i< size-2;i++) {
 				st.append(" ");
 			}
 			st.append("|");
 			break;
-		case JUST_LEFT_VERTICAL:
+		case STARTS_WITH_VERTICAL:
 			st.append("|");
 			for(int i=0;i< size-1;i++) {
 				st.append(" ");
 			}
 			break;
-		case JUST_RIGTH_VERTICAL:
+		case ENDS_WITH_VERTICAL:
 			for(int i=0;i< size-1;i++) {
 				st.append(" ");
 			}
@@ -97,10 +104,17 @@ public class NumbersConstructor {
 		}
 		return st.toString();
 	}
+	
+	/**
+	 * Returns a Digit object from a char that is always a digit (0 to 9)
+	 * 
+	 * @param char digit
+	 * @return
+	 */
 
-	public Number NumberFromChar(char c) {
-		Number number = null;
-		switch (c) {
+	public Digit digitFromChar(char digit) {
+		Digit number = null;
+		switch (digit) {
 		case '0':
 			number = ZERO;
 			break;
