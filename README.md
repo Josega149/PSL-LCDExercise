@@ -34,10 +34,10 @@ La línea del medio puede contener tanto espacios, líneas verticales u horizont
 El resto de líneas que conforman el número solo poseen espacios o lineas verticales en alguno de los extremos o en ambos.
 
 Regla de columnas: Dependiendo del tamaño a imprimir, los extremos de cada linea permanecen igual, sólo hay que rellenar el excedente para cumplir el size con " " o con "-" dependiendo del tipo de línea.
-Esto para cumplir con la regla: size+2 columnas. Notece que las dos columnas se refiere a los extremos, y el espacio intermedio debe rellenarse, según el tipo de línea, con "size" relleno.
+Esto para cumplir con la regla: size+2 columnas. Nótese que las dos columnas se refiere a los extremos, y el espacio intermedio debe rellenarse, según el tipo de línea, con "size" relleno.
 
 Regla de filas: Dependiendo del tamaño a imprimir, la primera línea se imprime una vez, al igual que la del medio y la última, pero las líneas intermedias se deben imprimir un número de veces igual al tamaño especificado por el usuario. 
-Esto para cumplir con la regla: 2*size + 3 filas. Notece que el +3 filas hace referencia a la línea superior, intermedia e inferior, y el número de filas entre superior e intermedia, e intermedia e inferior, es de "size".
+Esto para cumplir con la regla: 2*size + 3 filas. Nótese que el +3 filas hace referencia a la línea superior, intermedia e inferior, y el número de filas entre superior e intermedia, e intermedia e inferior, es de "size".
 
 Ejemplo de del 8, con tamaño 2 representado con la clase Number: 
 
