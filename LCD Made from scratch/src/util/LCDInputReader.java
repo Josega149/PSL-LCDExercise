@@ -9,10 +9,10 @@ import java.io.InputStreamReader;
  * @author Jose Gabriel Tamura Lara
  *
  */
-public class InputReader {
+public class LCDInputReader {
 	private BufferedReader in;
 	
-	public InputReader(){
+	public LCDInputReader(){
 		 in = new BufferedReader(new InputStreamReader(System.in));
 	}
 	
@@ -30,12 +30,11 @@ public class InputReader {
 			int size = Integer.parseInt(inputNewNumber[0]);
 			int number =  Integer.parseInt(inputNewNumber[1]);
 			
-			if(size<0 || size > 10){
+			if(size<0 || size > 10 || (size <1 && number !=0)){
 				throw new Exception("The given input is incorrect. Size has to be a value between 1 and 10.");
 			}
-			if(size <1 && number !=0) {
-				throw new Exception("The given input is incorrect. Size has to be a value between 1 and 10.");
-			}
+			
+			
 			
 			numberToPrint[0] = size;
 			numberToPrint[1] = number;
