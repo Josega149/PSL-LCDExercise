@@ -65,7 +65,7 @@ Entrada:
 0,0
    
 Salida: 
-
+```
       --   --       
    |    |    | |  | 
    |    |    | |  | 
@@ -97,7 +97,7 @@ Salida:
 |           |      |      | |    |      | 
 |           |      |      | |    |      | 
  ----   ----          ----   ----         
-
+```
 
 ## Consideraciones adicionales
 - El ejemplo original de https://github.com/pslcorp/lcdrefactor no concuerda del todo con el enunciado, pues utiliza "_" y esto afecta el número de columnas. Se hizo caso omiso al ejemplo y se desarrollo tal cúal se exponía en el enunciado.
